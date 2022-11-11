@@ -1,12 +1,15 @@
 .announcement {
-  margin-bottom: 145px;
+  padding-top: 120px;
+  padding-bottom: 145px;
 
   @include vp-1023 {
-    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
-    margin-bottom: 85px;
+    padding-top: 65px;
+    padding-bottom: 85px;
   }
 }
 

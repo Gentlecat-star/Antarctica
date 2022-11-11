@@ -1,12 +1,13 @@
 .main-inner {
-  position: relative;
-  top: -367px;
+  min-height: 650px;
+  // position: relative;
+  // top: -367px;
 
-  @include vp-1023 {
-    top: -358px;
-  }
+  // @include vp-1023 {
+  //   top: -358px;
+  // }
 
-  @include vp-767 {
-    top: -315px;
-  }
+  // @include vp-767 {
+  //   top: -315px;
+  // }
 }

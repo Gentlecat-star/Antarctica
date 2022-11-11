@@ -1,8 +1,51 @@
 .main-intro {
-  min-height: 250px;
+
   color: $color-alice-blue;
 
-  margin-bottom: 295px;
+  // margin-bottom: 295px;
+
+  background-color: $color-dark-cerulean;
+  background-image: url("../img/background/intro-bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include vp-1023 {
+    background-image: url("../img/background/intro-bg-tablet.jpg");
+  }
+
+  @include vp-767 {
+
+    // padding-bottom: 438px;
+  }
+
+  @include retina {
+    @include vp-1023 {
+      background-image: url("../img/background/intro-bg-tablet@2x.jpg");
+    }
+
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/background/intro-bg-desktop@2x.jpg");
+    }
+  }
+}
+
+.main-intro__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 150px 95px;
+  min-height: 650px;
+
+  @include vp-1023 {
+    padding: 100px 0;
+    min-height: 638px;
+  }
+
+  @include vp-767 {
+    padding: 65px 0;
+    min-height: 500px;
+  }
 }
 
 .main-intro h1 {
@@ -25,14 +68,6 @@
   @include vp-767 {
     font-size: 36px;
     line-height: 45px;
-  }
-}
-
-.main-intro__inner {
-  padding: 0 95px;
-
-  @include vp-1023 {
-    padding: 0;
   }
 }
 
