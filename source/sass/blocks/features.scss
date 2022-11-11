@@ -1,0 +1,116 @@
+.features {
+  background-color: $color-pattens-blue;
+  background-image: url("../img/background/features-bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+
+  @include vp-1023 {
+    background-image: url("../img/background/features-bg-tablet.jpg");
+  }
+
+  @include retina {
+    @include vp-1023 {
+      background-image: url("../img/background/features-bg-tablet@2x.jpg");
+    }
+
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/background/features-bg-desktop@2x.jpg");
+    }
+  }
+}
+
+.features__inner {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+.features h2 {
+  margin: 0;
+  margin-bottom: 60px;
+
+  text-align: center;
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+.features__list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 30px 50px;
+
+  background-color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding: 25px 15px 25px 20px;
+  }
+}
+
+.features__item-icon {
+  display: flex;
+  margin-bottom: 25px;
+
+  height: 32px;
+  width: auto;
+
+  @include vp-1023 {
+    height: 26px;
+  }
+}
+
+.features__item-icon svg {
+  height: 100%;
+  width: auto;
+}
+
+.features__item h3 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  @include vp-1023 {
+    line-height: 1.4;
+  }
+}
+
+.features__item p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.4;
+}

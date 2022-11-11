@@ -12,6 +12,13 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
+$color-alice-blue:                  #f9fbfd;
+$color-dark-cerulean:               #003d78;
+$color-pattens-blue:                #d8e5f4;
+$color-solitude:                    #e3ecf6;
+$color-tangaroa:                    #011c40;
+$color-quartz:                      #d8d8d9;
+$color-prussian-blue:               #002b66;
 
 // Gradient
 
@@ -27,18 +34,22 @@ $fz-default:                        16px;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-montserrat:                    "Montserrat", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
 
 $tf-default:                        ease;
+$tf-ease-out:                       ease-out;
 $trans-default:                     0.3s $tf-default;
+$trans-ease-out:                     0.3s $tf-ease-out;
+
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 $trans-600:                         0.6s $tf-default;
+$trans-ease-out-500:                0.5s $tf-ease-out;
 
 // Viewports
 // ---------------------------------
@@ -55,4 +66,4 @@ $vp-1920:                           1920px;
 // ---------------------------------
 
 $retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
+$retina-dppx:                       2dppx;

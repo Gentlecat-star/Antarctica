@@ -1,0 +1,85 @@
+.nav-toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-alice-blue;
+    content: "";
+
+    transition:
+      background-color $trans-ease-out-500,
+      transform $trans-ease-out-500;
+  }
+
+  &::after {
+    top: 17px;
+  }
+
+  &::before {
+    top: 5px;
+  }
+
+  & > span {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-alice-blue;
+
+    transition:
+      background-color $trans-ease-out-500,
+      transform $trans-ease-out-500;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include focus {
+    outline: 1px solid $color-alice-blue;
+    outline-offset: 1px;
+  }
+
+  &:active {
+    transition: none;
+    opacity: 0.4;
+  }
+}
+
+.nav-toggle.active {
+  &::after,
+  &::before,
+  & > span {
+    background-color: $color-tangaroa;
+  }
+
+  &::after {
+    transform: translate3d(3px, -6px, 0) rotate(45deg);
+    width: 18px;
+  }
+
+  &::before {
+    transform: translate3d(3px, 6px, 0) rotate(-45deg);
+    width: 18px;
+  }
+
+  & > span {
+    transform: scaleX(0);
+  }
+
+  @include focus {
+    outline: 1px solid $color-tangaroa;
+  }
+}

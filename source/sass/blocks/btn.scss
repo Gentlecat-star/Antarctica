@@ -1,18 +1,19 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  justify-content: center;
+  padding: 10px;
 
-  color: $color-default-white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $color-tangaroa;
+  text-align: center;
 
-  background-color: $color-neon-blue;
+  background-color: $color-alice-blue;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
 
   &:disabled {
     opacity: 0.5;
@@ -20,7 +21,17 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
+  &:hover {
     opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 1px solid $color-tangaroa;
+    outline-offset: -2px;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transition: none;
   }
 }

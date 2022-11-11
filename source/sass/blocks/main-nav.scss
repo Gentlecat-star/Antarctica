@@ -1,0 +1,173 @@
+.main-nav {
+  @include vp-767 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    width: 100%;
+
+    z-index: 2;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.main-nav__overlay {
+  display: none;
+
+  @include vp-767 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba($color: $color-prussian-blue, $alpha: 0.5);
+    opacity: 0;
+
+    transition: opacity $trans-default;
+  }
+}
+
+.main-nav__list-wrapper {
+  @include vp-767 {
+    position: absolute;
+    top: 62px;
+    right: 0;
+
+    height: 400px;
+    max-height: 70vh;
+    width: 285px;
+
+    transform: translate3d(100%, 0, 0);
+    transition: transform $trans-ease-out-500;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+    padding: 14px;
+    height: 100%;
+    overflow: auto;
+
+    color: $color-tangaroa;
+    background-color: $color-alice-blue;
+  }
+}
+
+.main-nav.active {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.active .main-nav__list-wrapper {
+  transform: translate3d(0, 0, 0);
+}
+
+.active .main-nav__overlay {
+  opacity: 1;
+}
+
+.main-nav__item {
+  margin-left: 33px;
+
+  @include vp-767 {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  &:last-child {
+    @include vp-767 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  padding: 10px 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: inherit;
+
+  vertical-align: middle;
+  transition: opacity $trans-default;
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+
+    padding: 10px 8px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px solid $color-alice-blue;
+    outline-offset: 1px;
+
+    @include vp-767 {
+      outline: 1px solid $color-tangaroa;
+    }
+  }
+
+  &:active {
+    transition: none;
+    opacity: 0.4;
+  }
+}
+
+.no-js .main-nav {
+  @include vp-767 {
+    position: static;
+    pointer-events: all;
+    overflow: visible;
+    visibility: visible;
+  }
+}
+.no-js .main-nav__overlay {
+  display: none;
+}
+
+.no-js .main-nav__list-wrapper {
+  @include vp-767 {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    transform: none;
+  }
+}
+
+.no-js .main-nav__list {
+  @include vp-767 {
+    overflow: visible;
+  }
+}
