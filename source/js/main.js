@@ -1,7 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initMainNav} from './modules/main-nav';
 import {initBookingForm} from './modules/form-booking';
-import './modules/map';
 
 // ---------------------------------
 

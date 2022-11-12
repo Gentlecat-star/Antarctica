@@ -736,10 +736,6 @@ button,
   left: 6px;
 }
 
-.main-header.no-js {
-  position: static;
-}
-
 .no-js .main-header__toggle {
   display: none;
 }
@@ -1958,6 +1954,10 @@ button,
 
   .main-header__toggle {
     display: block;
+  }
+
+  .main-header.no-js {
+    position: static;
   }
 
   .no-js .main-header__inner {
