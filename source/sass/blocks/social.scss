@@ -11,8 +11,23 @@
 .social__item {
   margin-left: 20px;
 
+  @include vp-1023 {
+    margin-left: 11px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
   &:first-child {
     margin-left: 0;
+  }
+
+  &:last-child {
+    @include vp-767 {
+      margin-right: 0;
+    }
   }
 }
 
@@ -43,5 +58,14 @@
   &:active {
     transition: none;
     opacity: 0.4;
+  }
+}
+
+.social__link svg {
+  height: 20px;
+  width: auto;
+
+  @include vp-1023 {
+    height: 16px;
   }
 }

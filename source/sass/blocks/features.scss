@@ -21,28 +21,32 @@
 }
 
 .features__inner {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 110px;
+  padding-bottom: 119px;
 
   @include vp-1023 {
-    padding-top: 100px;
+    padding-top: 91px;
     padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 58px;
+    padding-bottom: 66px;
   }
 }
 
 .features h2 {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 49px;
 
   text-align: center;
 
+  @include vp-1023 {
+    margin-bottom: 51px;
+  }
+
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 31px;
   }
 }
 
@@ -69,18 +73,18 @@
   display: flex;
   flex-direction: column;
 
-  padding: 30px 30px 50px;
+  padding: 30px 30px 47px;
 
   background-color: $color-alice-blue;
 
   @include vp-1023 {
-    padding: 25px 15px 25px 20px;
+    padding: 25px 15px 20px 20px;
   }
 }
 
 .features__item-icon {
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 
   height: 32px;
   width: auto;
@@ -97,7 +101,7 @@
 
 .features__item h3 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
 
   font-size: 18px;
   font-weight: 500;
@@ -106,11 +110,15 @@
   @include vp-1023 {
     line-height: 1.4;
   }
+
+  @include vp-767 {
+    margin-right: 50px;
+  }
 }
 
 .features__item p {
   margin: 0;
 
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.43;
 }

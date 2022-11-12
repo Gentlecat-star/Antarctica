@@ -35,7 +35,7 @@
 
   @include vp-767 {
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 21px;
   }
 }
 
@@ -55,12 +55,12 @@
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: nowrap;
-    margin-bottom: 30px;
+    margin-bottom: 19px;
   }
 }
 
 .main-footer__nav-item {
-  margin-right: 2.42vw;
+  margin-right: 2.58vw;
 
   @include vp-1023 {
     margin-right: 2.99vw;
@@ -68,7 +68,7 @@
 
   @include vp-767 {
     margin-right: 0;
-    margin-bottom: 13px;
+    margin-bottom: 8px;
   }
 
   &:last-child {
@@ -80,8 +80,15 @@
   padding: 10px 0;
 
   color: inherit;
+  line-height: 20px;
+  font-weight: 500;
 
   transition: opacity $trans-default;
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
+  }
 
   @include vp-767 {
     padding: 5px 0;
@@ -115,6 +122,6 @@
 
   @include vp-767 {
     flex-basis: auto;
-    margin-left: 0;
+    margin-left: -6px;
   }
 }

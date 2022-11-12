@@ -24,56 +24,57 @@
   display: flex;
   justify-content: space-around;
   padding-top: 50px;
-  padding-bottom: 50px;
-
-  @include vp-1023 {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+  padding-bottom: 51px;
 
   @include vp-1023 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-top: 88px;
+    padding-bottom: 101px;
   }
 
   @include vp-767 {
-    padding-top: 65px;
+    padding-top: 59px;
     padding-bottom: 65px;
   }
 }
 
 .booking__text {
   align-self: center;
+  margin-right: 20px;
 
   @include vp-1023 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
+    margin-right: 0;
+    margin-bottom: 53px;
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
   }
 }
 
 .booking__text h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 9px;
   max-width: 500px;
 
   font-size: 40px;
   font-weight: 700;
 
   @include vp-1023 {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 
     font-size: 34px;
     text-align: center;
   }
 
   @include vp-767 {
+    margin-bottom: 13px;
+
     font-size: 24px;
     line-height: 1.3;
   }

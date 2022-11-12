@@ -11,7 +11,7 @@ const initBookingForm = () => {
     agreementCheckbox.required = false;
   }
 
-  let inputMask = new Inputmask('+9 (9{3}) 9{3} 9{2} 9{2}');
+  let inputMask = new Inputmask('9{11}');
   inputMask.mask('.form-booking input[type="tel"]');
 };
 
@@ -25,7 +25,7 @@ const onBookingFormSubmit = (evt) => {
     agreementCheckbox.classList.remove('error');
   }
 
-  const phonePattern = /[+][1-9]\s*\([0-9]{3}\)\s*[0-9]{3}\s*[0-9]{2}\s*[0-9]{2}/gm;
+  const phonePattern = /[+]*[1-9]\s*\(*[0-9]{3}\)*\s*[0-9]{3}\s*[0-9]{2}\s*[0-9]{2}/gm;
   const phoneNumberInput = evt.target.querySelector('.form-booking input[type="tel"]');
   if (!phonePattern.test(phoneNumberInput.value)) {
     evt.preventDefault();
@@ -36,4 +36,3 @@ const onBookingFormSubmit = (evt) => {
 };
 
 export {initBookingForm};
-
