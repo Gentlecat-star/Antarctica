@@ -682,12 +682,6 @@ button,
   transition: none;
 }
 
-.block-title {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
 .main-header {
   position: absolute;
   left: 0;
@@ -1161,6 +1155,9 @@ button,
 .announcement__text-wrapper h2 {
   margin: 0;
   margin-bottom: 23px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .announcement__text-wrapper p {
@@ -1197,6 +1194,9 @@ button,
   margin: 0;
   margin-bottom: 49px;
   text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .features__list {
@@ -1259,6 +1259,9 @@ button,
   margin: 0;
   margin-bottom: 49px;
   text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .catalog__cards-list {
@@ -1673,11 +1676,6 @@ button,
 }
 
 @media (max-width: 1023px) {
-  .block-title {
-    font-size: 26px;
-    line-height: 1.4;
-  }
-
   .main-header__inner {
     padding-top: 21.5px;
     padding-bottom: 21.5px;
@@ -1766,6 +1764,8 @@ button,
   .announcement__text-wrapper h2 {
     margin-bottom: 16px;
     margin-top: -10px;
+    font-size: 26px;
+    line-height: 1.4;
   }
 
   .features {
@@ -1779,6 +1779,8 @@ button,
 
   .features h2 {
     margin-bottom: 51px;
+    font-size: 26px;
+    line-height: 1.4;
   }
 
   .features__list {
@@ -1804,6 +1806,8 @@ button,
 
   .catalog h2 {
     margin-bottom: 51px;
+    font-size: 26px;
+    line-height: 1.4;
   }
 
   .catalog__cards-list {
@@ -1919,10 +1923,6 @@ button,
   .container {
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .block-title {
-    font-size: 24px;
   }
 
   .main-header__inner {
@@ -2184,6 +2184,10 @@ button,
     margin-bottom: 43px;
   }
 
+  .announcement__text-wrapper h2 {
+    font-size: 24px;
+  }
+
   .announcement__image-wrapper img {
     width: 100%;
   }
@@ -2195,6 +2199,7 @@ button,
 
   .features h2 {
     margin-bottom: 31px;
+    font-size: 24px;
   }
 
   .features__list {
@@ -2213,6 +2218,7 @@ button,
 
   .catalog h2 {
     margin-bottom: 31px;
+    font-size: 24px;
   }
 
   .catalog__cards-list {
