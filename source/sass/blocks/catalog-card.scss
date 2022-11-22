@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column-reverse;
   padding: 29px 25px 22px;
+  width: 100%;
+  height: 100%;
 
   background-color: $color-dark-cerulean;
   color: $color-alice-blue;
@@ -56,6 +58,7 @@
 .catalog-card__inner {
   position: relative;
   flex-grow: 1;
+  overflow-y: auto;
 
   display: flex;
   flex-direction: column;
@@ -113,7 +116,7 @@
 .catalog-card__options-list {
   margin: 0;
   padding: 0;
-  margin-bottom: 6px;
+  margin-bottom: 25px;
 
   font-size: 14px;
   line-height: 1.4;

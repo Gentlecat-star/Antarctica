@@ -39,20 +39,22 @@
           <nav class="main-nav">
             <div class="main-nav__overlay"></div>
 
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#features">Преимущества</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#">Направления</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#catalog">Ближайшие&nbsp;круизы</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#contacts">Контакты</a>
-              </li>
-            </ul>
+            <div class="main-nav__list-wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#features">Преимущества</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Направления</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#catalog">Ближайшие&nbsp;круизы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </header>
@@ -383,7 +385,7 @@
               <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
 
               <input type="text" name="name" placeholder="Имя" required>
-              <input type="tel" name="phoneNumber" placeholder="Телефон" pattern="[+]*[1-9]\s*\(*[0-9]{3}\)*\s*[0-9]{3}\s*[0-9]{2}\s*[0-9]{2}" required>
+              <input type="tel" name="phoneNumber" placeholder="Телефон" pattern="[+]*(\d\s?)*" required>
               <input type="email" name="email" placeholder="Email" required>
 
               <label class="form-booking__checkbox">
@@ -480,7 +482,11 @@
       }, 2000);
 
       function getYaMap () {
-        const myMap = new ymaps.Map('map', {center: [59.938635, 30.323118], zoom: 16});
+        const myMap = new ymaps.Map('map', {
+          center: [59.938635, 30.323118], zoom: 16
+        }, {
+          autoFitToViewport: 'always'
+        });
         ymaps.geocode('г. Санкт Петербург, ул. Большая Конюшенная, 19/8').then(function (res) {
           const coord = res.geoObjects.get(0).geometry.getCoordinates();
           const myPlacemark = new ymaps.Placemark(coord, {

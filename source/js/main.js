@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initMainNav} from './modules/main-nav';
 import {initBookingForm} from './modules/form-booking';
+import {initMap} from './modules/map';
 
 // ---------------------------------
 
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   initMainNav();
   initBookingForm();
+  initMap();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
