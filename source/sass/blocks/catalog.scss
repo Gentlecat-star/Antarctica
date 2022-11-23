@@ -39,25 +39,19 @@
 .catalog__cards-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 386px;
   gap: 30px;
 
   padding: 0 15px;
   margin: 0;
   list-style-type: none;
 
-  @media (max-width: 1250px) {
-    grid-auto-rows: calc(302px + 84 * (100vw - 1024px) / (1250 - 1024));
-  }
-
   @include vp-1023 {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: calc(386px + 159 * (100vw - 768px) / (1024 - 768));
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    grid-auto-rows: calc(386px + 639 * (100vw - 320px) / (768 - 320));
+    justify-items: center;
     padding: 0 10px;
   }
 }
